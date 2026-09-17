@@ -1,0 +1,87 @@
+Phenotype_Category	Phenotype	ACMG_SF_Version	MIM_Disorder	Gene	Inheritance	Variants_to_Report
+Cancer	Familial adenomatous polyposis (FAP)	1.0	175100	APC	AD	All P and LP
+Cancer	Familial medullary thyroid cancer/Multiple endocrine neoplasia 2	1.0	155240	RET	AD	All P and LP
+Cancer	Familial medullary thyroid cancer/Multiple endocrine neoplasia 2	1.0	171400	RET	AD	All P and LP
+Cancer	Familial medullary thyroid cancer/Multiple endocrine neoplasia 2	1.0	162300	RET	AD	All P and LP
+Cancer	Hereditary breast and/or ovarian cancer	1.0	604370	BRCA1	AD	All P and LP
+Cancer	Hereditary breast and/or ovarian cancer	1.0	612555	BRCA2	AD	All P and LP
+Cancer	Hereditary breast and/or ovarian cancer	3.0	114480	PALB2	AD	All P and LP
+Cancer	Hereditary paraganglioma-pheochromocytoma syndrome	3.0	171300	MAX	AD	All P and LP
+Cancer	Hereditary paraganglioma-pheochromocytoma syndrome	1.0	601650	SDHAF2	AD	All P and LP
+Cancer	Hereditary paraganglioma-pheochromocytoma syndrome	1.0	115310	SDHB	AD	All P and LP
+Cancer	Hereditary paraganglioma-pheochromocytoma syndrome	1.0	605373	SDHC	AD	All P and LP
+Cancer	Hereditary paraganglioma-pheochromocytoma syndrome	1.0	168000	SDHD	AD	All P and LP
+Cancer	Hereditary paraganglioma-pheochromocytoma syndrome	3.0	171300	TMEM127	AD	All P and LP
+Cancer	Juvenile polyposis syndrome (JPS)	2.0	174900	BMPR1A	AD	All P and LP
+Cancer	Juvenile polyposis syndrome (JPS)/Hereditary hemorrhagic telangiectasia syndrome	2.0	175050	SMAD4	AD	All P and LP
+Cancer	Li-Fraumeni syndrome	1.0	151623	TP53	AD	All P and LP
+Cancer	Lynch syndrome/Hereditary non-polyposis colorectal cancer (HNPCC)	1.0	609310	MLH1	AD	All P and LP
+Cancer	Lynch syndrome/Hereditary non-polyposis colorectal cancer (HNPCC)	1.0	120435	MSH2	AD	All P and LP
+Cancer	Lynch syndrome/Hereditary non-polyposis colorectal cancer (HNPCC)	1.0	614350	MSH6	AD	All P and LP
+Cancer	Lynch syndrome/Hereditary non-polyposis colorectal cancer (HNPCC)	1.0	614337	PMS2	AD	All P and LP
+Cancer	Multiple endocrine neoplasia type 1	1.0	131100	MEN1	AD	All P and LP
+Cancer	MUTYH-associated polyposis (MAP)	1.0	608456	MUTYH	AR	P and LP (2 variants)
+Cancer	NF2-related schwannomatosis	1.0	101000	NF2	AD	All P and LP
+Cancer	Peutz-Jeghers syndrome (PJS)	1.0	175200	STK11	AD	All P and LP
+Cancer	PTEN hamartoma tumor syndrome	1.0	158350	PTEN	AD	All P and LP
+Cancer	Retinoblastoma	1.0	180200	RB1	AD	All P and LP
+Cancer	Tuberous sclerosis complex	1.0	191100	TSC1	AD	All P and LP
+Cancer	Tuberous sclerosis complex	1.0	613254	TSC2	AD	All P and LP
+Cancer	von Hippel-Lindau syndrome	1.0	193300	VHL	AD	All P and LP
+Cancer	WT1-related Wilms tumor	1.0	194070	WT1	AD	All P and LP
+Cardiovascular	Aortopathies	1.0	611788	ACTA2	AD	All P and LP
+Cardiovascular	Aortopathies	1.0	154700	FBN1	AD	All P and LP
+Cardiovascular	Aortopathies	1.0	132900	MYH11	AD	All P and LP
+Cardiovascular	Aortopathies	1.0	613795	SMAD3	AD	All P and LP
+Cardiovascular	Aortopathies	1.0	609192	TGFBR1	AD	All P and LP
+Cardiovascular	Aortopathies	1.0	610168	TGFBR2	AD	All P and LP
+Cardiovascular	Arrhythmogenic right ventricular cardiomyopathy (a subcategory of Arrhythmogenic Cardiomyopathy or ACM)	1.0	610476	DSC2	AD	All P and LP
+Cardiovascular	Arrhythmogenic right ventricular cardiomyopathy (a subcategory of Arrhythmogenic Cardiomyopathy or ACM)	1.0	610193	DSG2	AD	All P and LP
+Cardiovascular	Arrhythmogenic right ventricular cardiomyopathy (a subcategory of Arrhythmogenic Cardiomyopathy or ACM)	1.0	607450	DSP	AD	All P and LP
+Cardiovascular	Arrhythmogenic right ventricular cardiomyopathy (a subcategory of Arrhythmogenic Cardiomyopathy or ACM)	1.0	609040	PKP2	AD	All P and LP
+Cardiovascular	Arrhythmogenic right ventricular cardiomyopathy (a subcategory of Arrhythmogenic Cardiomyopathy or ACM)	1.0	604400	TMEM43	AD	All P and LP
+Cardiovascular	Catecholaminergic polymorphic ventricular tachycardia	3.0	611938	CASQ2	AR	P and LP (2 variants)
+Cardiovascular	Catecholaminergic polymorphic ventricular tachycardia	1.0	604772	RYR2	AD	All P and LP
+Cardiovascular	Catecholaminergic polymorphic ventricular tachycardia	3.0	615441	TRDN	AR	P and LP (2 variants)
+Cardiovascular	Dilated cardiomyopathy	3.1	613881	BAG3	AD	All P and LP
+Cardiovascular	Dilated cardiomyopathy	3.1	604765	DES	AD	All P and LP
+Cardiovascular	Dilated cardiomyopathy	3.0	617047	FLNC	AD	All P and LP
+Cardiovascular	Dilated cardiomyopathy	1.0	115200	LMNA	AD	All P and LP (with case-level cardiac phenotype evidence)
+Cardiovascular	Dilated cardiomyopathy	3.3	609909	PLN	AD	All P and LP
+Cardiovascular	Dilated cardiomyopathy	3.1	613172	RBM20	AD	All P and LP
+Cardiovascular	Dilated cardiomyopathy	3.1	611879	TNNC1	AD	All P and LP
+Cardiovascular	Dilated cardiomyopathy	1.0	601494	TNNT2	AD	All P and LP
+Cardiovascular	Dilated cardiomyopathy	3.0	604145	TTN	AD	All P and LP (truncating only)
+Cardiovascular	Ehlers-Danlos syndrome, vascular type	1.0	130050	COL3A1	AD	All P and LP
+Cardiovascular	Familial hypercholesterolemia	1.0	144010	APOB	AD	All P and LP
+Cardiovascular	Familial hypercholesterolemia	1.0	143890	LDLR	SD	All P and LP
+Cardiovascular	Familial hypercholesterolemia	1.0	603776	PCSK9	AD	All P and LP
+Cardiovascular	Hypertrophic cardiomyopathy	1.0	612098	ACTC1	AD	All P and LP
+Cardiovascular	Hypertrophic cardiomyopathy	1.0	115197	MYBPC3	AD	All P and LP
+Cardiovascular	Hypertrophic cardiomyopathy	1.0	192600	MYH7	AD	All P and LP
+Cardiovascular	Hypertrophic cardiomyopathy	1.0	608758	MYL2	AD	All P and LP
+Cardiovascular	Hypertrophic cardiomyopathy	1.0	608751	MYL3	AD	All P and LP
+Cardiovascular	Hypertrophic cardiomyopathy	1.0	600858	PRKAG2	AD	All P and LP
+Cardiovascular	Hypertrophic cardiomyopathy	1.0	613690	TNNI3	AD	All P and LP
+Cardiovascular	Hypertrophic cardiomyopathy	1.0	115196	TPM1	AD	All P and LP
+Cardiovascular	Long QT syndrome 3; Brugada syndrome	1.0	603830,601144	SCN5A	AD	All P and LP
+Cardiovascular	Long QT syndrome types 1 and 2	1.0	613688	KCNH2	AD	All P and LP
+Cardiovascular	Long QT syndrome types 1 and 2	1.0	192500	KCNQ1	AD	All P and LP
+Cardiovascular	Long QT syndrome types 14-16	3.2	616247	CALM1	AD	All P and LP
+Cardiovascular	Long QT syndrome types 14-16	3.2	616249	CALM2	AD	All P and LP
+Cardiovascular	Long QT syndrome types 14-16	3.2	618782	CALM3	AD	All P and LP
+Inborn_Errors_of_Metabolism	Biotinidase deficiency	3.0	253260	BTD	AR	P and LP (2 variants)
+Inborn_Errors_of_Metabolism	Cerebrotendinous xanthomatosis	3.3	213700	CYP27A1	AR	P and LP (2 variants)
+Inborn_Errors_of_Metabolism	Fabry disease	1.0	301500	GLA	XL	All hemi, het, homozygous P and LP
+Inborn_Errors_of_Metabolism	Hereditary hemochromatosis	3.0	235200	HFE	AR	HFE p.C282Y homozygotes only
+Inborn_Errors_of_Metabolism	Ornithine transcarbamylase deficiency	2.0	311250	OTC	XL	All hemi, het, homozygous P and LP
+Inborn_Errors_of_Metabolism	Pompe disease	3.0	232300	GAA	AR	P and LP (2 variants)
+Inborn_Errors_of_Metabolism	X-linked adrenoleukodystrophy	3.3	300100	ABCD1	XL	All hemi, homozygous or two het. P and/or LP
+Miscellaneous	Hereditary hemorrhagic telangiectasia	3.0	600376	ACVRL1	AD	All P and LP
+Miscellaneous	Hereditary hemorrhagic telangiectasia	3.0	187300	ENG	AD	All P and LP
+Miscellaneous	Hereditary TTR (transthyretin) amyloidosis	3.1	105210	TTR	AD	All P and LP
+Miscellaneous	Malignant hyperthermia	1.0	601887	CACNA1S	AD	All P and LP
+Miscellaneous	Malignant hyperthermia	1.0	145600	RYR1	AD	All P and LP
+Miscellaneous	Maturity-Onset of Diabetes of the Young	3.0	600496	HNF1A	AD	All P and LP
+Miscellaneous	RPE65-related retinopathy	3.0	204100,613794	RPE65	AR	P and LP (2 variants)
+Miscellaneous	Wilson disease	2.0	277900	ATP7B	AR	P and LP (2 variants)

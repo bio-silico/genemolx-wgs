@@ -1,0 +1,65 @@
+GeneMolX Proprietary License
+Version 1.0 — 2026-09-15
+
+Copyright © 2026 GeneMolX AI LLC
+1500 N GRANT ST STE N, DENVER, CO, 80203, USA
+All rights reserved.
+
+Approved by GeneMolX AI LLC, 2026-09-15.
+
+1. DEFINITIONS
+   "Software" means the scripts, configuration files and curated resource files
+   in this repository, and any derivative of them.
+   "Licensor" means GeneMolX AI LLC.
+   "You" means the individual or entity exercising the rights granted here.
+
+2. GRANT
+   Licensor grants You a personal, non-exclusive, non-transferable, revocable
+   licence to download, install, run and study the Software for Your own
+   internal, non-commercial use, free of charge. The Software is published so
+   that it can be read, audited and used; publication does not place it in the
+   public domain and does not make it open source.
+
+3. RESTRICTIONS
+   You may not:
+   (a) sell, sublicense, rent, lease or otherwise distribute the Software or any
+       derivative of it, whether modified or unmodified;
+   (b) use the Software, or any output produced by it, in a commercial service,
+       including any clinical, diagnostic or interpretation service offered to
+       third parties, without a separate written agreement with Licensor;
+   (c) remove or alter any copyright, attribution or licence notice;
+   (d) use the GeneMolX name, logo or trademarks except to identify the origin
+       of the Software.
+
+4. THIRD-PARTY DATA AND TOOLS
+   The Software downloads and uses third-party reference data and software that
+   are licensed separately by their respective owners. This licence grants no
+   rights to them. You are solely responsible for complying with each source's
+   terms. Several sources, including REVEL and SpliceAI, are not licensed for
+   commercial use.
+
+5. NO MEDICAL USE
+   The Software is for research and informational purposes only. It is not a
+   medical device, and it is not intended to diagnose, treat, cure or prevent
+   any disease. Its output is not a clinical result. Any use in patient care
+   requires orthogonal confirmation in an accredited laboratory and
+   interpretation by a qualified clinician.
+
+6. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, ACCURACY AND NON-INFRINGEMENT.
+
+7. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR SHALL NOT BE LIABLE FOR ANY
+   CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE, ITS USE, OR ANY
+   INTERPRETATION OF ITS OUTPUT.
+
+8. TERMINATION
+   This licence terminates automatically if You breach any term. On termination
+   You must stop using the Software and delete all copies in Your possession.
+
+9. GOVERNING LAW
+   This licence is governed by the laws of the State of Colorado, USA, without
+   regard to its conflict-of-laws rules.

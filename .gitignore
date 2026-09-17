@@ -1,0 +1,15 @@
+# Remote tabix index caches (htslib downloads these at run time)
+*.vcf.bgz.tbi
+.tabix_cache/
+
+# Raw upstream downloads and large derived tables — rebuilt by
+# GMX_download_references.sh, not tracked
+resources/gencc/gencc-submissions.tsv
+resources/gencode/
+# note: resources/gnomad/gnomad_v4.1_constraint.tsv IS tracked (704 KB, curated);
+# the 91 MB raw download it is built from is written to the reference tmp dir
+
+# Run artifacts
+*.log
+tmp/
+downloads/
