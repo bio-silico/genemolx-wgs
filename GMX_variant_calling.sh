@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # Activate genemolx-wgs environment (required for GATK, BWA, Samtools, FastQC)
-GMX_VERSION="0.1.0"
+GMX_VERSION="0.2.0"
 case "${1:-}" in
 	-V|--version) echo "GMX_variant_calling.sh ${GMX_VERSION} - GeneMolX WGS pipeline"; exit 0 ;;
 esac

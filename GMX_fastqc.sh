@@ -18,7 +18,7 @@ set -euo pipefail
 # --nogroup keeps every cycle separate in the per-base plots; FastQC otherwise
 # bins cycles in reads over 50 bp and hides position-specific problems.
 
-GMX_VERSION="0.1.0"
+GMX_VERSION="0.2.0"
 case "${1:-}" in
 	-V|--version) echo "GMX_fastqc.sh ${GMX_VERSION} - GeneMolX WGS pipeline"; exit 0 ;;
 esac

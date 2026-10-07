@@ -35,7 +35,7 @@ set -euo pipefail
 #   clinical_report.txt                            (human-readable summary)
 # ---------------------------------------------------------------------------
 
-GMX_VERSION="0.1.0"
+GMX_VERSION="0.2.0"
 case "${1:-}" in
 	-V|--version) echo "GMX_clinical_variants.sh ${GMX_VERSION} - GeneMolX WGS pipeline"; exit 0 ;;
 esac
@@ -69,6 +69,7 @@ gencc_table="${5:-$(dirname "$0")/resources/gencc/gencc_gene_inheritance.tsv}"
 gnomad_url="https://storage.googleapis.com/gcp-public-data--gnomad/release/4.1/vcf/joint"
 constraint_table="${6:-$(dirname "$0")/resources/gnomad/gnomad_v4.1_constraint.tsv}"
 exon_table="${7:-$(dirname "$0")/resources/gencode/transcript_exons.tsv}"
+carrier_panel="${8:-$(dirname "$0")/resources/acmg/ACMG_carrier_2021_tier3_genes.tsv}"
 
 # --- thresholds ------------------------------------------------------------
 RARE_MAX=0.001          # rare: population max AF <= 0.1%
@@ -247,6 +248,15 @@ BEGIN {
         }
     }
     close(acmg_table)
+    # ACMG 2021 carrier screening panel, tier 3: Gene=1, Inheritance=2, Condition=8
+    if (carrier_panel != "") {
+        nl = 0
+        while ((getline line < carrier_panel) > 0) {
+            if (++nl == 1) continue
+            split(line, a, "\t"); cp_inh[a[1]] = a[2]; cp_cond[a[1]] = a[8]
+        }
+        close(carrier_panel)
+    }
     # GenCC (CC0): Gene=1, Inheritance=2, Validity=3, Disease=4
     if (gencc_table != "") {
         nl = 0
@@ -345,8 +355,9 @@ FNR == 1 { for (i = 1; i <= NF; i++) col[$i] = i; next }
     else next
 
     sub(/^;/, "", ev); if (ev == "") ev = "."
-    # inheritance: ACMG SF table -> GenCC -> Funcotator Mode_of_Inheritance
+    # inheritance: ACMG SF table -> ACMG carrier panel -> GenCC -> Funcotator
     if (gene in sf_inh)        inh = sf_inh[gene]
+    else if (gene in cp_inh)   inh = cp_inh[gene]
     else if (gene in gc_inh && gc_inh[gene] != ".") inh = gc_inh[gene]
     else                       inh = nz(getv("Mode_of_Inheritance"))
     if (inh == "") inh = "."
@@ -453,7 +464,7 @@ mawk -v acmg_table="${acmg_table}" -v gencc_table="${gencc_table}" \
      -v q_mqrs="${Q_MQRS}" -v q_rprs="${Q_RPRS}" -v q_fs_snp="${Q_FS_SNP}" \
      -v q_fs_indel="${Q_FS_INDEL}" -v q_sor="${Q_SOR}" \
      -v q_vaf_het_lo="${Q_VAF_HET_LO}" -v q_vaf_het_hi="${Q_VAF_HET_HI}" -v q_vaf_hom_lo="${Q_VAF_HOM_LO}" \
-     -v mean_cov="$(num_ok "${mcov}" && echo "${mcov}" || echo 0)" \
+     -v mean_cov="$(num_ok "${mcov}" && echo "${mcov}" || echo 0)" -v carrier_panel="${carrier_panel}" \
      -f "${TIER_AWK}" \
      "${results}/curated_snps_clinical.tsv" "${results}/curated_indels_clinical.tsv" \
      2> "${results}/.sexcheck" \
@@ -599,6 +610,14 @@ BEGIN {
     }
     close(constraint_table)
     nl = 0
+    if (carrier_panel != "") {
+        while ((getline line < carrier_panel) > 0) {
+            if (++nc == 1) continue
+            split(line, a, "\t"); cp[a[1]] = a[2]; cp_cond[a[1]] = a[8]
+        }
+        close(carrier_panel)
+    }
+    nl = 0
     while ((getline line < exon_table) > 0) {
         if (++nl == 1) continue
         split(line, a, "\t")
@@ -609,7 +628,8 @@ BEGIN {
     split("NONSENSE FRAME_SHIFT_INS FRAME_SHIFT_DEL SPLICE_SITE START_CODON_SNP START_CODON_DEL START_CODON_INS", L, " ")
     for (i in L) null_var[L[i]] = 1
 }
-NR == 1 { print $0, "ACMG_Class", "ACMG_Points", "ACMG_Codes", "Gene_LOEUF", "Gene_MisZ"; next }
+NR == 1 { print $0, "ACMG_Class", "ACMG_Points", "ACMG_Codes", "Gene_LOEUF", "Gene_MisZ",
+                "ACMG_Carrier_Panel", "Carrier_Condition"; next }
 {
     gene = $3; cls = $9; tx = $12; sub(/\..*$/, "", tx)
     pos = $5 + 0; exon = n($13)
@@ -687,11 +707,12 @@ NR == 1 { print $0, "ACMG_Class", "ACMG_Points", "ACMG_Codes", "Gene_LOEUF", "Ge
     if (qc_pass == 0)      klass = "Not_classified(sample_failed_QC)"
     else if ($30 == "LOW") klass = "Not_classified(low_quality_call)"
     if (codes == "") codes = "."
-    print $0, klass, pts, codes, (lo < 0 ? "." : lo), (mz < 0 ? "." : mz)
+    print $0, klass, pts, codes, (lo < 0 ? "." : lo), (mz < 0 ? "." : mz), \
+          ((gene in cp) ? "True" : "False"), ((gene in cp_cond && cp_cond[gene] != "") ? cp_cond[gene] : ".")
 }
 AWKEOF
 
-mawk -v constraint_table="${constraint_table}" -v exon_table="${exon_table}" \
+mawk -v constraint_table="${constraint_table}" -v exon_table="${exon_table}" -v carrier_panel="${carrier_panel}" \
      -v ba1_af="${BA1_AF}" -v bs1_af="${BS1_AF}" -v bs1_ar="${BS1_AR}" -v qc_pass="${qc_pass}" \
      -f "${CLASS_AWK}" "${results}/clinical_tiers.tsv" > "${results}/.tiers_classified"
 mv -f "${results}/.tiers_classified" "${results}/clinical_tiers.tsv"
@@ -797,6 +818,18 @@ show 1
 echo ""
 echo "5. TIER 5 - CARRIER STATUS"
 echo "--------------------------"
+echo "   On the ACMG 2021 carrier screening panel (tier 3, 113 genes) - these are the"
+echo "   results a preconception or prenatal carrier screen would report:"
+mawk -F'\t' 'NR>1 && $1==5 && $52=="True" { n++
+    printf "     %-9s %-14s %-26s %s\n", $3, ($10!="."?$10:substr($11,1,14)), substr($16,1,26), $53 }
+    END { if (!n) print "     none" }' "${results}/clinical_tiers.tsv"
+echo ""
+echo "   Additional carrier findings, in recessive genes outside that panel. No guideline"
+echo "   recommends screening these; they are reported because the data shows them:"
+mawk -F'\t' 'NR>1 && $1==5 && $52!="True" { n++
+    printf "     %-9s %-14s %-26s %s\n", $3, ($10!="."?$10:substr($11,1,14)), substr($16,1,26), substr($21,1,34) }
+    END { if (!n) print "     none" }' "${results}/clinical_tiers.tsv"
+echo ""
 show 5
 if [ "${plp_no_inh}" -gt 0 ]; then
     echo "   NOTE: ${plp_no_inh} heterozygous P/LP variant(s) have no mode of inheritance in"
@@ -855,8 +888,12 @@ echo "     variant was queried and is absent from gnomAD (PM2-supporting)."
 echo "   - Gene-disease validity and inheritance come from GenCC (CC0). Genes with"
 echo "     no GenCC assertion carry Gene_Validity = . and rank below curated genes;"
 echo "     absence of an assertion is not evidence against the gene."
-echo "   - Carrier status covers genes with a curated recessive or X-linked"
-echo "     assertion; it is not an ACMG carrier-screening panel."
+echo "   - Carrier status is reported against the ACMG 2021 carrier screening panel"
+echo "     (tier 3: 97 autosomal recessive + 16 X-linked genes, carrier frequency"
+echo "     >=1/200). Carriers found in other recessive genes are listed separately."
+echo "   - Two panel conditions cannot be assessed from short-read WGS: SMN1 copy"
+echo "     number (spinal muscular atrophy) and FMR1 CGG repeat expansion (fragile X)."
+echo "     A negative result here does not exclude either."
 echo "   - No pharmacogenomic (PGx) interpretation."
 echo "   - SpliceAI scores cover SNVs only (masked MANE v1.4 release)."
 echo "   - QC_Flags / Confidence are computed from GATK annotations only; LOW"
@@ -869,7 +906,7 @@ echo "   Annotation  : GATK Funcotator (Gencode v43)"
 echo "   ClinVar     : see funcotator data sources config"
 echo "   Frequency   : gnomAD v4.1 joint (grpmax FAF95, remote lookup) + v2.1 fallback"
 echo "   Predictors  : REVEL, AlphaMissense, SpliceAI (ClinGen-calibrated thresholds)"
-echo "   Gene list   : ACMG SF v3.3 (84 genes)"
+echo "   Gene list   : ACMG SF v3.3 (84 genes); ACMG 2021 carrier panel (113 genes)"
 echo "   Gene-disease: GenCC submissions export (CC0 1.0)"
 echo ""
 echo "12. NOTE"

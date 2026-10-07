@@ -7,9 +7,9 @@ set -euo pipefail
 # Filters and annotates germline variants from any human whole-genome sample
 # Following GATK4 best practices workflow
 # Input: raw_snps.vcf and raw_indels.vcf from GMX_variant_calling.sh
-# Output: curated_snps_clinical.tsv and curated_indels_clinical.tsv (48 columns)
+# Output: curated_snps_clinical.tsv and curated_indels_clinical.tsv (51 columns)
 
-GMX_VERSION="0.1.0"
+GMX_VERSION="0.2.0"
 case "${1:-}" in
 	-V|--version) echo "GMX_annotation.sh ${GMX_VERSION} - GeneMolX WGS pipeline"; exit 0 ;;
 esac
@@ -218,11 +218,16 @@ BEGIN {
     nf=split($9, fmt, ":")
     split($10, samp, ":")
     gt=""; dp=""; ad=""; gq=""
+    pgt=""; pid=""; ps=""
     for (i=1; i<=nf; i++) {
         if (fmt[i]=="GT") gt=samp[i]
         if (fmt[i]=="DP") dp=samp[i]
         if (fmt[i]=="AD") ad=samp[i]
         if (fmt[i]=="GQ") gq=samp[i]
+        # physical phasing, emitted by HaplotypeCaller only where it could phase
+        if (fmt[i]=="PGT") pgt=samp[i]
+        if (fmt[i]=="PID") pid=samp[i]
+        if (fmt[i]=="PS")  ps=samp[i]
     }
     # VAF: sites are bi-allelic after normalization (AD = REF,ALT)
     vaf="."
@@ -254,11 +259,13 @@ BEGIN {
     out = out OFS acmg_sf OFS splice_region
     for (i = 1; i <= nnew; i++) out = out OFS val(newf[i])
     out = out OFS ival("QD") OFS ival("FS") OFS ival("SOR") OFS ival("MQ") OFS ival("MQRankSum") OFS ival("ReadPosRankSum")
+    # phase set: needed to tell in trans from in cis for ACMG PM3
+    out = out OFS (pgt=="" ? "." : pgt) OFS (pid=="" ? "." : pid) OFS (ps=="" ? "." : ps)
     print out
 }
 AWKEOF
 
-HEADER="CHROM\tPOS\tID\tREF\tALT\tQUAL\tGT\tDP\tAD\tGQ\tVAF\tGene\tVariant_Classification\tVariant_Type\tGenome_Change\tTranscript\tExon\tcDNA_Change\tCodon_Change\tProtein_Change\tLOF_Mechanism\tMode_of_Inheritance\tACMG_Disease\tClinVar_Significance\tClinVar_Review_Status\tClinVar_Disease\tClinVar_HGVS\tdbSNP_RS\tLMM_Flagged\tgnomAD_Exome_AF\tgnomAD_Exome_AF_PopMax\tgnomAD_Genome_AF\tgnomAD_Genome_AF_PopMax\tOther_Transcripts\tACMG_SF\tSplice_Region\tgnomAD_v4.1_Joint_AF\tgnomAD_v4.1_Grpmax_FAF95\tAlphaMissense_Score\tAlphaMissense_Class\tREVEL_Score\tSpliceAI_DS_Max\tQD\tFS\tSOR\tMQ\tMQRankSum\tReadPosRankSum"
+HEADER="CHROM\tPOS\tID\tREF\tALT\tQUAL\tGT\tDP\tAD\tGQ\tVAF\tGene\tVariant_Classification\tVariant_Type\tGenome_Change\tTranscript\tExon\tcDNA_Change\tCodon_Change\tProtein_Change\tLOF_Mechanism\tMode_of_Inheritance\tACMG_Disease\tClinVar_Significance\tClinVar_Review_Status\tClinVar_Disease\tClinVar_HGVS\tdbSNP_RS\tLMM_Flagged\tgnomAD_Exome_AF\tgnomAD_Exome_AF_PopMax\tgnomAD_Genome_AF\tgnomAD_Genome_AF_PopMax\tOther_Transcripts\tACMG_SF\tSplice_Region\tgnomAD_v4.1_Joint_AF\tgnomAD_v4.1_Grpmax_FAF95\tAlphaMissense_Score\tAlphaMissense_Class\tREVEL_Score\tSpliceAI_DS_Max\tQD\tFS\tSOR\tMQ\tMQRankSum\tReadPosRankSum\tPGT\tPID\tPS"
 
 # SNPs
 echo "  Extracting curated SNP table..."

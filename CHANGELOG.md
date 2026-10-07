@@ -3,6 +3,26 @@
 All notable changes to the GeneMolX WGS pipeline are recorded here.
 Versions follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] — 2026-10-06
+
+### Added
+- ACMG 2021 carrier screening panel (tier 3: 97 autosomal recessive + 16 X-linked genes,
+  carrier frequency >=1/200) as `resources/acmg/ACMG_carrier_2021_tier3_genes.tsv`. Carrier
+  findings are now reported against this panel and separated from carriers in recessive genes
+  outside it, which no guideline recommends screening.
+- `PGT`, `PID` and `PS` columns in the curated tables, carrying HaplotypeCaller's physical
+  phasing. These distinguish two variants in cis from in trans — the difference between a
+  benign haplotype and a compound-heterozygous genotype.
+- `ACMG_Carrier_Panel` and `Carrier_Condition` columns in the tiered clinical output.
+- Limitation stating that SMN1 copy number and FMR1 repeat expansion cannot be assessed from
+  short-read WGS, so their absence from the results is not a negative screening result.
+
+### Changed
+- Curated tables: 48 -> 51 columns. Tiered clinical output: 51 -> 53 columns. All additions are
+  appended; no existing column moved, was renamed, or changed type.
+- Gene inheritance is resolved in the order ACMG SF v3.3 -> ACMG carrier panel -> GenCC ->
+  Funcotator.
+
 ## [0.1.0] — 2026-09-16
 
 First release. Germline whole-genome short-variant analysis, FASTQ to clinical report.

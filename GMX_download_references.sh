@@ -19,7 +19,7 @@ set -euo pipefail
 # SpliceAI: public Ensembl precomputed masked scores for all SNVs in MANE Select v1.4 transcripts (GRCh38).
 #   Ensembl does not provide SpliceAI scores for indels (indels only from Illumina BaseSpace, login required).
 
-GMX_VERSION="0.1.0"
+GMX_VERSION="0.2.0"
 case "${1:-}" in
 	-V|--version) echo "GMX_download_references.sh ${GMX_VERSION} - GeneMolX WGS pipeline"; exit 0 ;;
 esac

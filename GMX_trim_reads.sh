@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # Activate conda environment
-GMX_VERSION="0.1.0"
+GMX_VERSION="0.2.0"
 case "${1:-}" in
 	-V|--version) echo "GMX_trim_reads.sh ${GMX_VERSION} - GeneMolX WGS pipeline"; exit 0 ;;
 esac

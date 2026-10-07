@@ -1,0 +1,114 @@
+Gene	Inheritance	Source_Table	Carrier_Frequency_Band	Max_Carrier_Frequency	OMIM_Gene	OMIM_Phenotype	Condition
+ABCA3	AR	Table 3	<1/100 to >=1/150	0.008587	601615	610921	Surfactant metabolism dysfunction, pulmonary 3
+ABCC8	AR	Table 2	<1/50 to >=1/100	0.012242	600509	618857	Diabetes mellitus, permanent neonatal 3
+ABCD1	XL	Table 6	X-linked		300371	300100	Adrenoleukodystrophy (ALD)
+ACADM	AR	Table 1	>=1/50	0.016583	607008	201450	Medium-chain acyl-coenzyme A dehydrogenase deficiency
+ACADVL	AR	Table 4	<1/150 to >=1/200	0.006419	609575	201475	Very long chain acyl-CoA dehydrogenase deficiency
+ACAT1	AR	Table 4	<1/150 to >=1/200	0.005000	607809	203750	alpha-Methylacetoacetic aciduria
+AFF2	XL	Table 6	X-linked		300806	309548	Mental retardation, X-linked, associated with fragile site FRAXE
+AGA	AR	Table 3	<1/100 to >=1/150	0.008364	613228	208400	Aspartylglucosaminuria
+AGXT	AR	Table 3	<1/100 to >=1/150	0.006648	604285	259900	Hyperoxaluria, primary type I
+AHI1	AR	Table 2	<1/50 to >=1/100	0.009740	608894	608629	Joubert syndrome 3
+AIRE	AR	Table 3	<1/100 to >=1/150	0.007664	607358	240300	Autoimmune polyendocrinopathy syndrome type I
+ALDOB	AR	Table 2	<1/50 to >=1/100	0.012119	612724	229600	Hereditary fructosuria
+ALPL	AR	Table 4	<1/150 to >=1/200	0.005719	171760	146300	Hypophosphatasia, adult
+ANO10	AR	Table 2	<1/50 to >=1/100	0.010781	613726	613728	Spinocerebellar ataxia 10
+ARSA	AR	Table 4	<1/150 to >=1/200	0.005986	607574	250100	Metachromatic leukodystrophy
+ARX	XL	Table 6	X-linked		300382	308350	Developmental and epileptic encephalopathy 1 (DEE1)
+ASL	AR	Table 4	<1/150 to >=1/200	0.006190	608310	207900	Argininosuccinate aciduria
+ASPA	AR	Table 1	>=1/50	0.019856	608034	271900	Canavan disease
+ATP7B	AR	Table 1	>=1/50	0.021983	277900	606882	Wilson disease
+BBS1	AR	Table 4	<1/150 to >=1/200	0.005713	209901	209900	Bardet-Biedl syndrome 1
+BBS2	AR	Table 3	<1/100 to >=1/150	0.007501	606151	615981	Bardet-Biedl syndrome 2
+BCKDHB	AR	Table 2	<1/50 to >=1/100	0.011760	248611	245600	Maple syrup urine disease
+BLM	AR	Table 5	outside gnomAD criteria		604610	210900	Bloom syndrome
+BTD	AR	Table 4	<1/150 to >=1/200	0.005953	609019	253260	Biotinidase deficiency
+CBS	AR	Table 4	<1/150 to >=1/200	0.004676	236200	236200	Homocystinuria, B6 responsive and nonresponsive
+CC2D2A	AR	Table 4	<1/150 to >=1/200	0.004969	612013	612285	Joubert syndrome 9
+CCDC88C	AR	Table 3	<1/100 to >=1/150	0.007282	611204	236600	Congenital hydrocephalus 1
+CEP290	AR	Table 2	<1/50 to >=1/100	0.014422	610142	610188	Joubert syndrome 5
+CFTR	AR	Table 1	>=1/50	0.040972	602421	219700	Cystic fibrosis
+CHRNE	AR	Table 2	<1/50 to >=1/100	0.013526	100725	100725	Myasthenic syndrome, congenital, 4A, slow-channel
+CLCN1	AR	Table 4	<1/150 to >=1/200	0.005688	118425	255700	Congenital myotonia, autosomal recessive form
+CLRN1	AR	Table 5	outside gnomAD criteria		606397	276902	Usher syndrome 3a
+CNGB3	AR	Table 3	<1/100 to >=1/150	0.006849	605080	262300	Achromatopsia 3
+COL7A1	AR	Table 2	<1/50 to >=1/100	0.012995	120120	226600	Recessive dystrophic epidermolysis bullosa
+CPT2	AR	Table 2	<1/50 to >=1/100	0.009742	600650	600649	Carnitine palmitoyltransferase II deficiency, infantile
+CYP11A1	AR	Table 3	<1/100 to >=1/150	0.008771	118485	613743	Adrenal insufficiency, congenital, with 46, XY sex reversal,
+CYP21A2	AR	Table 1	>=1/50	0.048459	613815	201910	Congenital adrenal hyperplasia due to 21-hydroxylase
+CYP27A1	AR	Table 3	<1/100 to >=1/150	0.007399	606530	213700	Cerebrotendinous xanthomatosis
+CYP27B1	AR	Table 4	<1/150 to >=1/200	0.005512	609506	264700	Vitamin D-dependent rickets, type 1
+DHCR7	AR	Table 1	>=1/50	0.023709	602858	270400	Smith-Lemli-Opitz syndrome
+DHDDS	AR	Table 3	<1/100 to >=1/150	0.009340	608172	613861	Congenital disorder of glycosylation type 1
+DLD	AR	Table 5	outside gnomAD criteria		238331	246900	Dihydrolipoamide
+DMD	XL	Table 6	X-linked		300377	300376	Muscular dystrophy, Becker type (BMD)
+DYNC2H1	AR	Table 1	>=1/50	0.014817	603297	613091	Short-rib thoracic dysplasia 3 with or without polydactyly
+ELP1	AR	Table 5	outside gnomAD criteria		603722	223900	Familial dysautonomia
+ERCC2	AR	Table 1	>=1/50	0.015255	126340	610756	Cerebrooculofacioskeletal syndrome 2
+EVC2	AR	Table 4	<1/150 to >=1/200	0.006083	607261	225500	Chondroectodermal dysplasia
+F8	XL	Table 6	X-linked		306700	300841	Hemophilia A (HEMA)
+F9	XL	Table 6	X-linked		300746	306900	Hemophilia B (HEMB)
+FAH	AR	Table 3	<1/100 to >=1/150	0.007716	613871	276700	Tyrosinemia type I
+FANCC	AR	Table 2	<1/50 to >=1/100	0.011992	613899	227645	Fanconi anemia, complementation group C
+FKRP	AR	Table 4	<1/150 to >=1/200	0.004668	606596	613153	Muscular dystrophy-dystroglycanopathy, type A, 5
+FKTN	AR	Table 1	>=1/50	0.015660	607440	611615	Cardiomyopathy, dilated, 1X
+FMO3	AR	Table 3	<1/100 to >=1/150	0.007190	136132	602079	Trimethylaminuria
+FMR1	XL	Table 6	X-linked		309550	300624	Fragile X syndrome (FXS)
+FXN	AR	Table 5	outside gnomAD criteria		606829	229300	Friedreich ataxia
+G6PC	AR	Table 2	<1/50 to >=1/100	0.013401	613742	232200	Glycogen storage disease type IA
+GAA	AR	Table 2	<1/50 to >=1/100	0.013565	606800	232300	Glycogen storage disease, type II (Pompe disease)
+GALT	AR	Table 3	<1/100 to >=1/150	0.009132	606999	230400	Galactosemia
+GBA	AR	Table 3	<1/100 to >=1/150	0.008572	606463	230800	Gaucher disease, type I
+GBE1	AR	Table 2	<1/50 to >=1/100	0.013799	607839	232500	Glycogen storage disease, type IV
+GJB2	AR	Table 1	>=1/50	0.026200	121011	220290	Nonsyndromic hearing loss recessive 1A
+GLA	XL	Table 6	X-linked		300644	301500	Fabry disease
+GNPTAB	AR	Table 3	<1/100 to >=1/150	0.008454	607840	252500	Mucolipidosis type II alpha/beta
+GRIP1	AR	Table 2	<1/50 to >=1/100	0.011989	604597	617667	Fraser syndrome
+HBA1	AR	Table 5	outside gnomAD criteria		141800	604131	alpha-Thalassemia
+HBA2	AR	Table 5	outside gnomAD criteria		141850		alpha-Thalassemia
+HBB	AR	Table 1	>=1/50	0.119837	141900	603903	Sickle cell anemia beta-thalassemia
+HEXA	AR	Table 1	>=1/50	0.033146	606869	272800	Tay-Sachs disease
+HPS1	AR	Table 5	outside gnomAD criteria		604982	203300	Hermansky Pudlak S. 1
+HPS3	AR	Table 5	outside gnomAD criteria		606118	614072	Hermansky Pudlak S. 3
+IDUA	AR	Table 4	<1/150 to >=1/200	0.004675	252800	607014	Mucopolysaccharidosis, Ih (Hurler S)
+L1CAM	XL	Table 6	X-linked		308840	307000	Hydrocephalus due to congenital stenosis of aqueduct of Sylvius (HSAS)
+LRP2	AR	Table 4	<1/150 to >=1/200	0.004676	600073	222448	Donnai-Barrow syndrome
+MCCC2	AR	Table 4	<1/150 to >=1/200	0.005184	609014	210210	3-methylcrotonyl CoA carboxylase 2 deficiency
+MCOLN1	AR	Table 3	<1/100 to >=1/150	0.008531	605248	252650	Mucolipidosis type IV
+MCPH1	AR	Table 3	<1/100 to >=1/150	0.006822	607117	651200	Primary microcephaly 1, recessive
+MID1	XL	Table 6	X-linked		300552	300000	Opitz GBBB syndrome, type I (GBBB1)
+MLC1	AR	Table 4	<1/150 to >=1/200	0.005058	605908	604004	Megalencephalic leukoencephalopathy with
+MMACHC	AR	Table 3	<1/100 to >=1/150	0.008610	609831	277400	Methylmalonic aciduria with homocystinuria cblC type
+MMUT	AR	Table 2	<1/50 to >=1/100	0.009999	609058	251000	Methylmalonic aciduria-methylmalonyl-CoA mutase
+MVK	AR	Table 4	<1/150 to >=1/200	0.005966	251170	260920	Hyper-IgD syndrome
+NAGA	AR	Table 2	<1/50 to >=1/100	0.010637	104170	609241	Schindler disease, type 1
+NEB	AR	Table 5	outside gnomAD criteria		161650	256030	Nemaline myopathy 2
+NPHS1	AR	Table 1	>=1/50	0.015994	602716	256300	Finnish congenital nephrotic syndrome
+NR0B1	XL	Table 6	X-linked		300473	300200	Adrenal hypoplasia, congenital (AHC)
+OCA2	AR	Table 2	<1/50 to >=1/100	0.013113	611409	203200	Oculocutaneous albinism brown and type II
+OTC	XL	Table 6	X-linked		300461	311250	Ornithine transcarbamylase deficiency
+PAH	AR	Table 1	>=1/50	0.046068	612349	261600	Phenylketonuria
+PCDH15	AR	Table 3	<1/100 to >=1/150	0.008330	605514	609533	Deafness, autosomal recessive 23
+PKHD1	AR	Table 4	<1/150 to >=1/200	0.005960	606702	263200	Autosomal recessive polycystic kidney disease
+PLP1	XL	Table 6	X-linked		300401	312920	Spastic paraplegia 2, X-linked (SPG2)
+PMM2	AR	Table 1	>=1/50	0.015877	601785	212065	Carbohydrate-deficient glycoprotein syndrome type Ia
+POLG	AR	Table 4	<1/150 to >=1/200	0.005330	174763	203700	Mitochondrial DNA depletion syndrome 4A
+PRF1	AR	Table 3	<1/100 to >=1/150	0.006734	170280	603553	Hemophagocytic lymphohistiocytosis, familial, 2
+RARS2	AR	Table 4	<1/150 to >=1/200	0.004592	611524	611523	Pontocerebellar hypoplasia type 6
+RNASEH2B	AR	Table 4	<1/150 to >=1/200	0.004609	610326	610181	Aicardi Goutieres syndrome 2
+RPGR	XL	Table 6	X-linked		312610	300029	Retinitis pigmentosa 3 (RP3; RP)
+RS1	XL	Table 6	X-linked		300839	312700	Retinoschisis 1, X-linked, juvenile (RS1)
+SCO2	AR	Table 3	<1/100 to >=1/150	0.006671	604272	604377	Mitochondrial complex IV deficiency, nuclear type 2
+SLC19A3	AR	Table 3	<1/100 to >=1/150	0.009163	606152	607483	Basal ganglia disease, biotin-responsive
+SLC26A2	AR	Table 4	<1/150 to >=1/200	0.004715	606718	226900	Epiphyseal dysplasia, multiple, 4
+SLC26A4	AR	Table 1	>=1/50	0.015422	605646	600791	Deafness autosomal recessive 4
+SLC37A4	AR	Table 3	<1/100 to >=1/150	0.006748	602671	232220	Glycogen storage disease Ib
+SLC6A8	XL	Table 6	X-linked		300036	300352	Cerebral creatine deficiency syndrome 1 (CCDS1)
+SMN1	AR	Table 5	outside gnomAD criteria		600354		Spinal muscular atrophy types I, II, III, IV
+SMPD1	AR	Table 2	<1/50 to >=1/100	0.010259	607608	257200	Niemann-Pick disease, type A
+TF	AR	Table 3	<1/100 to >=1/150	0.008615	190000	209300	Atransferrinemia
+TMEM216	AR	Table 3	<1/100 to >=1/150	0.007107	613277	608091	Joubert syndrome 2
+TNXB	AR	Table 1	>=1/50	0.035134	600985	606408	Ehlers-Danlos-like syndrome due to tenascin-X deficiency
+TYR	AR	Table 1	>=1/50	0.049337	606933	203100	Oculocutaneous albinism type 1A and 1B
+USH2A	AR	Table 2	<1/50 to >=1/100	0.010203	608400	276901	Usher syndrome, type 2A
+XPC	AR	Table 1	>=1/50	0.050885	613208	278720	Xeroderma pigmentosum
